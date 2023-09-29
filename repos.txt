@@ -1,0 +1,12 @@
+traact_base
+traact_core
+traact_spatial
+traact_vision
+traact_gui
+traact_component_aruco
+traact_component_basic
+traact_component_cereal
+traact_component_http
+traact_component_kinect_azure
+traact_component_pcpd_shm
+traact_component_pointcloud
