@@ -50,8 +50,8 @@ class TraactPackage(ConanFile):
         self.requires("traact_component_kinect_azure/0.0.0@traact/latest")
         self.requires("traact_component_cereal/0.0.0@traact/latest")
         self.requires("traact_component_aruco/0.0.0@traact/latest")
-        self.requires("traact_component_pcpd_shm/0.0.0@traact/latest")
-        self.requires("traact_component_pointcloud/0.0.0@traact/latest")
+        self.requires("traact_pcpd/0.0.0@traact/latest")
+        self.requires("traact_pointcloud/0.0.0@traact/latest")
         self.requires("traact_component_http/0.0.0@traact/latest")
         self.requires("yaml-cpp/0.7.0")
 
@@ -91,6 +91,10 @@ class TraactPackage(ConanFile):
         self.requires("eigen/[>=3.4.0]", transitive_headers=True)
         self.requires("ceres-solver/2.1.0", transitive_headers=True, transitive_libs=True)
         self.requires("libwebp/1.3.1", override=True)
+        self.requires("zenoh-c/0.10.1-rc@camposs/stable", run=True)
+        self.requires("zenoh-cpp/0.10.1-rc@camposs/stable", run=True)
+        self.requires("fast-cdr/2.0.0@camposs/stable", run=True, override=True)
+        #self.requires("fast-dds/2.10.1", transitive_headers=True)
 
     def configure(self):
         self.options['traact_core'].shared = self.options.shared

@@ -28,10 +28,10 @@ Add all libraries directories you want to edit to CMakeLists.txt
 ./build_all.sh
 mkdir build
 cd build
-conan install ..
+conan build ..
 ```
 
-Open folder in Clion and run CMake
+Open folder in Clion, run CMake and build all targets
 
 ```
 ./update_env.sh
